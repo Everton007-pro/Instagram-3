@@ -1,0 +1,90 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: rgba(24, 24, 24, 0.95);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+    width: 175px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007dc1;
+}
+
+.facebook-btn {
+    background-color: #385185;
+    margin-top: 10px;
+}
+
+.divider {
+    margin: 15px 0;
+    color: #aaa;
+}
+
+.forgot, .register p {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.register a {
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.get-app {
+    margin-top: 20px;
+    color: white;
+}
+
+.app-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.app-badge {
+    height: 40px;
+}

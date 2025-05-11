@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sessão • Instagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="Instagram_logo.png" alt="Instagram" class="logo">
+        <form onsubmit="return handleLogin(event)">
+            <input type="text" placeholder="Número de telemóvel, nome de utilizador ou e-mail" required>
+            <input type="password" placeholder="Palavra-passe" required>
+            <button type="submit">Iniciar Sessão</button>
+        </form>
+        <div class="divider">ou</div>
+        <button class="facebook-btn">Iniciar sessão com o Facebook</button>
+        <a href="#" class="forgot">Esqueceste-te da palavra-passe?</a>
+        <div class="register">
+            <p>Não tens uma conta? <a href="#">Regista-te.</a></p>
+        </div>
+        <p class="get-app">Obtém a aplicação.</p>
+        <div class="app-links">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="app-badge">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Microsoft_Store_badge.svg" alt="Microsoft Store" class="app-badge">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
