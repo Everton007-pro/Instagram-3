@@ -1,9 +1,8 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Importando os módulos necessários do Firebase através do CDN
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js';
+import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js';
 
-// Your web app's Firebase configuration
+// Configuração do Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCzd7eE66XGnreij-e6UuXiXLrNGsGo1yE",
   authDomain: "meu-site-3092e.firebaseapp.com",
@@ -13,15 +12,12 @@ const firebaseConfig = {
   appId: "1:369880096681:web:8199ffe9e956d260b6aeb8"
 };
 
-// Initialize Firebase
+// Inicializando o Firebase
 const app = initializeApp(firebaseConfig);
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js";
 
-// Conecta com o banco Firestore
+// Função para adicionar dados no Firestore
 const db = getFirestore(app);
-
-// Função para salvar os dados no banco
-async function addUserToDatabase(username, password) {
+export async function addUserToDatabase(username, password) {
   try {
     await addDoc(collection(db, "usuarios"), {
       username: username,
