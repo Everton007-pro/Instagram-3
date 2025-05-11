@@ -1,4 +1,4 @@
-// Importando os módulos necessários do Firebase através do CDN
+// Importando Firebase diretamente dos CDNs
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js';
 import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js';
 
@@ -15,8 +15,10 @@ const firebaseConfig = {
 // Inicializando o Firebase
 const app = initializeApp(firebaseConfig);
 
-// Função para adicionar dados no Firestore
+// Obter a instância do Firestore
 const db = getFirestore(app);
+
+// Função para adicionar usuário no Firestore
 export async function addUserToDatabase(username, password) {
   try {
     await addDoc(collection(db, "usuarios"), {
